@@ -1,0 +1,27 @@
+Source: pylint-restricted-imports
+Section: python
+Priority: optional
+Maintainer: Pexip AS <packaging@pexip.com>
+Build-Depends: debhelper (>= 11), dh-python, python3-all, python3-setuptools,
+  python3-astroid,
+  python3-importlib-metadata,
+  python3-pytest,
+  python3-toml,
+  pylint3,
+Standards-Version: 4.1.3
+Homepage: https://github.com/pexip/pylint-restricted-imports
+X-Python3-Version: >= 3.7
+Vcs-Browser: https://github.com/pexip/os-pylint-restricted-imports
+Vcs-Git: https://github.com/pexip/os-pylint-restricted-imports.git
+Rules-Requires-Root: no
+Testsuite: autopkgtest-pkg-python
+
+Package: pylint-restricted-imports
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}
+Description: pylint plugin for restricting what imports are allowed in specific modules
+ pylint-restricted-imports is Pylint plugin for restricting what imports are
+ allowed in specific module trees.
+ .
+ Want to prevent django from being imported in a flask app?
+ This plugin is for you!
