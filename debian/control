@@ -16,7 +16,7 @@ Vcs-Git: https://github.com/pexip/os-pylint-restricted-imports.git
 Rules-Requires-Root: no
 Testsuite: autopkgtest-pkg-python
 
-Package: pylint-restricted-imports
+Package: python3-pylint-restricted-imports
 Architecture: all
 Depends: ${python3:Depends}, ${misc:Depends}
 Description: pylint plugin for restricting what imports are allowed in specific modules
