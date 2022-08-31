@@ -1,0 +1,12 @@
+--- a/tests/test_imports.py
++++ b/tests/test_imports.py
+@@ -3,7 +3,8 @@
+ 
+ import astroid
+ 
+-from pylint.testutils import CheckerTestCase, Message
++from pylint.message import Message
++from pylint.testutils import CheckerTestCase
+ 
+ from pylint_restricted_imports import RestrictedImportChecker
+ 
