@@ -1,3 +1,12 @@
+pylint-restricted-imports (0.2.0-0pexip1) pexip-bookworm; urgency=medium
+
+  * Drop python3.7 support
+  * Drop pylint <2.16 support
+  * Add pylint 3.x support
+  * Drop test patch
+
+ -- Huw Jones <huw@pexip.com>  Wed, 10 Jan 2024 15:41:26 +0000
+
 pylint-restricted-imports (0.1.1-0pexip8) pexip-bookworm; urgency=medium
 
   * Bookworm build for product distribution
