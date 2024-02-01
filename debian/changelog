@@ -1,3 +1,9 @@
+pylint-restricted-imports (0.2.0-0+pexip24u2) pexip-bookworm; urgency=medium
+
+  * New versioning scheme
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Thu, 01 Feb 2024 16:18:23 +0000
+
 pylint-restricted-imports (0.2.0-0pexip1) pexip-bookworm; urgency=medium
 
   * Drop python3.7 support
