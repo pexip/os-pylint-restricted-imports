@@ -1,0 +1,35 @@
+Index: pylint-restricted-imports/pylint_restricted_imports/__init__.py
+===================================================================
+--- pylint-restricted-imports.orig/pylint_restricted_imports/__init__.py
++++ pylint-restricted-imports/pylint_restricted_imports/__init__.py
+@@ -1,7 +1,7 @@
+ from collections import defaultdict
+ from typing import Optional, List, Union, Set, Dict
+ 
+-from astroid import Import, Module, ImportFrom, AstroidBuildingException
++from astroid import Import, Module, ImportFrom, AstroidBuildingError
+ 
+ try:
+     from astroid.nodes.node_classes import NodeNG
+@@ -93,18 +93,18 @@ class RestrictedImportChecker(BaseChecke
+         if isinstance(node, Import):
+             try:
+                 module = node.do_import_module(name)
+-            except AstroidBuildingException:
++            except AstroidBuildingError:
+                 return None
+         elif node.modname:
+             try:
+                 module = node.do_import_module(f"{node.modname}.{name}")
+-            except AstroidBuildingException:
++            except AstroidBuildingError:
+                 pass
+ 
+             if not module:
+                 try:
+                     module = node.do_import_module(node.modname)
+-                except AstroidBuildingException:
++                except AstroidBuildingError:
+                     pass
+ 
+         if isinstance(module, Module):
