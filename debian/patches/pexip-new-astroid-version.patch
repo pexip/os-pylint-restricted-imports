@@ -1,3 +1,5 @@
+Patch for use with new version of astroid
+
 Index: pylint-restricted-imports/pylint_restricted_imports/__init__.py
 ===================================================================
 --- pylint-restricted-imports.orig/pylint_restricted_imports/__init__.py
